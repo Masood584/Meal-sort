@@ -77,7 +77,7 @@ const ProductCard = ({
   showDelete,
   mainData,
   setMainData,
-  handleDelete
+  handleDelete,
 }) => {
   const handleSelectMeal = (e, val, index) => {
     // e.preventDefault()
@@ -153,7 +153,12 @@ const ProductCard = ({
                     Rating:{" "}
                     <span style={{ fontWeight: 400 }}>{val.rating} </span>
                   </Typography>
-                  <Rating name="size-small" defaultValue={2} size="small" />
+                  <Rating
+                    name="size-small"
+                    value={val.rating}
+                    size="small"
+                    precision={0.5}
+                  />
                 </Stack>
               </Stack>
             </CardContainer>
